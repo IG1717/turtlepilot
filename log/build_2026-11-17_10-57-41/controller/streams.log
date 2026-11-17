@@ -1,0 +1,24 @@
+[0.371s] Invoking command in '/Users/ilangoldfein/dev/pid-bot/ros_ws/controller': PIXI_PROMPT=(ros_ws) PYTHONPATH=/Users/ilangoldfein/dev/pid-bot/ros_ws/build/controller/prefix_override:/Users/ilangoldfein/dev/pid-bot/ros_ws/.pixi/envs/default/lib/python3.14/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/ilangoldfein/dev/pid-bot/ros_ws/install/controller/lib/python3.14/site-packages:${PYTHONPATH} SHLVL=3 _=/usr/bin/env /Users/ilangoldfein/dev/pid-bot/ros_ws/.pixi/envs/default/bin/python3.14 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/controller build --build-base /Users/ilangoldfein/dev/pid-bot/ros_ws/build/controller/build install --record /Users/ilangoldfein/dev/pid-bot/ros_ws/build/controller/install.log --single-version-externally-managed install_data
+[0.573s] running egg_info
+[0.581s] writing ../build/controller/controller.egg-info/PKG-INFO
+[0.582s] writing dependency_links to ../build/controller/controller.egg-info/dependency_links.txt
+[0.582s] writing entry points to ../build/controller/controller.egg-info/entry_points.txt
+[0.582s] writing requirements to ../build/controller/controller.egg-info/requires.txt
+[0.582s] writing top-level names to ../build/controller/controller.egg-info/top_level.txt
+[0.601s] reading manifest file '../build/controller/controller.egg-info/SOURCES.txt'
+[0.601s] writing manifest file '../build/controller/controller.egg-info/SOURCES.txt'
+[0.602s] running build
+[0.602s] running build_py
+[0.602s] copying controller/turtle_controller.py -> /Users/ilangoldfein/dev/pid-bot/ros_ws/build/controller/build/lib/controller
+[0.603s] running install
+[0.606s] running install_lib
+[0.614s] copying /Users/ilangoldfein/dev/pid-bot/ros_ws/build/controller/build/lib/controller/turtle_controller.py -> /Users/ilangoldfein/dev/pid-bot/ros_ws/install/controller/lib/python3.14/site-packages/controller
+[0.615s] byte-compiling /Users/ilangoldfein/dev/pid-bot/ros_ws/install/controller/lib/python3.14/site-packages/controller/turtle_controller.py to turtle_controller.cpython-314.pyc
+[0.615s] running install_data
+[0.615s] running install_egg_info
+[0.624s] removing '/Users/ilangoldfein/dev/pid-bot/ros_ws/install/controller/lib/python3.14/site-packages/controller-0.0.0-py3.14.egg-info' (and everything under it)
+[0.624s] Copying ../build/controller/controller.egg-info to /Users/ilangoldfein/dev/pid-bot/ros_ws/install/controller/lib/python3.14/site-packages/controller-0.0.0-py3.14.egg-info
+[0.626s] running install_scripts
+[0.645s] Installing turtle_controller script to /Users/ilangoldfein/dev/pid-bot/ros_ws/install/controller/lib/controller
+[0.646s] writing list of installed files to '/Users/ilangoldfein/dev/pid-bot/ros_ws/build/controller/install.log'
+[0.664s] Invoked command in '/Users/ilangoldfein/dev/pid-bot/ros_ws/controller' returned '0': PIXI_PROMPT=(ros_ws) PYTHONPATH=/Users/ilangoldfein/dev/pid-bot/ros_ws/build/controller/prefix_override:/Users/ilangoldfein/dev/pid-bot/ros_ws/.pixi/envs/default/lib/python3.14/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/ilangoldfein/dev/pid-bot/ros_ws/install/controller/lib/python3.14/site-packages:${PYTHONPATH} SHLVL=3 _=/usr/bin/env /Users/ilangoldfein/dev/pid-bot/ros_ws/.pixi/envs/default/bin/python3.14 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/controller build --build-base /Users/ilangoldfein/dev/pid-bot/ros_ws/build/controller/build install --record /Users/ilangoldfein/dev/pid-bot/ros_ws/build/controller/install.log --single-version-externally-managed install_data
