@@ -25,7 +25,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'turtle_controller = controller.turtle_controller:main'
+            'turtle_controller = controller.turtle_controller:main',
+            'goal_input = controller.goal_input:main',
         ],
     },
 )

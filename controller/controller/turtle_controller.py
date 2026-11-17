@@ -4,6 +4,7 @@ from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 from turtlesim_msgs.msg import Pose
 from controller.pid import PID
+from geometry_msgs.msg import Point
 import math
 
 class TurtleController(Node):
@@ -11,11 +12,17 @@ class TurtleController(Node):
         super().__init__('turtle_controller')
         self.get_logger().info('Turtle controller started')
         
+        self.subscription = self.create_subscription(
+            Point,
+            '/goal',
+            self.goal_callback,
+            10)
+        
         self.publisher_ = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
         self.timer_period = 0.05 # 20hz 
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
-        self.x_target = 8
-        self.y_target = 8
+        self.x_target = None
+        self.y_target = None
         self.subscription = self.create_subscription(
             Pose,
             '/turtle1/pose',
@@ -29,7 +36,7 @@ class TurtleController(Node):
         
     def timer_callback(self):
         msg = Twist()
-        if(self.latest_pose == None):
+        if(self.latest_pose == None or self.x_target == None or self.y_target == None):
             return
 
         dx = self.x_target - self.latest_pose.x
@@ -45,6 +52,12 @@ class TurtleController(Node):
     def listener_callback(self, msg):
         self.latest_pose = msg
         #self.get_logger().info('I heard: "%s"' % msg._x)
+        
+    def goal_callback(self, msg):
+        self.x_target = msg.x
+        self.y_target = msg.y
+        self.distance_controller.reset()
+        self.angle_controller.reset()
     
     def _wrap(self, theta):
         while(theta > math.pi):
